@@ -1,5 +1,4 @@
-﻿using InputSwitcher;
-using Suima.Scene;
+using InputSwitcher;
 using UniRx.Triggers;
 using UnityEngine;
 using UniRx;
