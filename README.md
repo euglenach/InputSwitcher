@@ -100,14 +100,14 @@ InputSw.Switch(hoge);
 
 ## Inputを流す
 
-InputAsObservableのメソッドをラッパーしているクラス「InputSw」のメソッドにIInputReceiverインスタンスを渡す
+InputSwのインプット系のメソッドにIInputReceiverインスタンスを渡す
 
 ```C#
 InputSw.GetKey(this, KeyCode.C)
         .Subscribe(_ => {Debug.Log("Hoge");});
 ```
 
-# Current
+## Current
 
 現在のキーインスタンスを取得する
 
@@ -115,7 +115,7 @@ InputSw.GetKey(this, KeyCode.C)
 InputSw.Current;
 ```
 
-# IsCurrent
+## IsCurrent
 
 今のキーインスタンスが引数と一致するか
 
@@ -123,9 +123,10 @@ InputSw.Current;
 InputSw.IsCurrent(hoge)
 ```
 
-# IsActive
+## IsActive
 
 InputSwがアクティブかどうかを取得する
+
 IsActiveプロパティがfalseだと、SwitchメソッドとInput系メソッドを通さなくなる
 デフォルトはtrue
 
@@ -137,7 +138,7 @@ InputSw.IsActive;
 InputSw.IsActive = !InputSw.IsActive;
 ```
 
-# Pause
+## Pause
 
 InputSw.IaActiveプロパティを非アクティブにする
 
@@ -145,7 +146,7 @@ InputSw.IaActiveプロパティを非アクティブにする
 InputSw.Pause();
 ```
 
-# Resume
+## Resume
 
 InputSw.IaActiveプロパティをアクティブにする
 
@@ -153,7 +154,7 @@ InputSw.IaActiveプロパティをアクティブにする
 InputSw.Resume();
 ```
 
-# IsLogWrite
+## IsLogWrite
 
 ログを出力するかのプロパティ
 デフォルトはtrue
