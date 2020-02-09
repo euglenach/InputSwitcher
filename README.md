@@ -11,7 +11,6 @@
 
 ```C#
 using UnityEngine;
-using UniRx;
 using InputSwitcher;
 
 public class Hoge : MonoBehaviour, IInputReceiver{
@@ -49,7 +48,7 @@ public class Foo : MonoBehaviour,IInputReceiver{
 }
 ```
 
-# 分岐方法を決定する
+## 分岐方法を決定する
 
 ```C#
 using InputSwitcher;
@@ -76,3 +75,89 @@ public class SampleInputController : MonoBehaviour{
 }
 ```
 
+![screenshot 1559356854](https://user-images.githubusercontent.com/28961922/74109866-aca20e00-4bca-11ea-8e92-eccdd09d8d73.png)
+
+
+# リファレンス
+
+## IInputReceiver
+
+インプットを流すクラスに実装するインターフェース
+
+```C#
+public class Hoge : MonoBehaviour,IInputReceiver{
+
+}
+```
+
+## Switch
+
+インプットを通すキーになるインスタンスを切り替える
+
+```C#
+InputSw.Switch(hoge);
+```
+
+## Inputを流す
+
+InputAsObservableのメソッドをラッパーしているクラス「InputSw」のメソッドにIInputReceiverインスタンスを渡す
+
+```C#
+InputSw.GetKey(this, KeyCode.C)
+        .Subscribe(_ => {Debug.Log("Hoge");});
+```
+
+# Current
+
+現在のキーインスタンスを取得する
+
+```C#
+InputSw.Current;
+```
+
+# IsCurrent
+
+今のキーインスタンスが引数と一致するか
+
+```C#
+InputSw.IsCurrent(hoge)
+```
+
+# IsActive
+
+InputSwがアクティブかどうかを取得する
+IsActiveプロパティがfalseだと、SwitchメソッドとInput系メソッドを通さなくなる
+デフォルトはtrue
+
+```C#
+InputSw.IsActive;
+```
+
+```C#
+InputSw.IsActive = !InputSw.IsActive;
+```
+
+# Pause
+
+InputSw.IaActiveプロパティを非アクティブにする
+
+```C#
+InputSw.Pause();
+```
+
+# Resume
+
+InputSw.IaActiveプロパティをアクティブにする
+
+```C#
+InputSw.Resume();
+```
+
+# IsLogWrite
+
+ログを出力するかのプロパティ
+デフォルトはtrue
+
+```C#
+InputSw.IsLogWrite = false;
+```
