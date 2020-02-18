@@ -1,5 +1,7 @@
 # InputSwitcher
 
+Inputの分岐を安全かつ楽にできるライブラリ
+
 # 必要なもの
 [UniRx](https://github.com/neuecc/unirx)
 
