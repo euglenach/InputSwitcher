@@ -1,0 +1,17 @@
+{
+    "name": "InputSwitcher",
+    "rootNamespace": "",
+    "references": [
+        "GUID:83289ace8392d0b47b89d6c909b6b218",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
