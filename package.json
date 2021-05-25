@@ -1,0 +1,21 @@
+{
+  "name": "com.euglenach.inputswitcher",
+  "version": "1.0.0",
+  "displayName": "InputSwitcher",
+  "description": "A library that makes input branching safe and easy based on Rx.",
+  "dependencies": {
+    "com.neuecc.unirx": "7.1.0",
+    "com.euglenach.inputasobservable": "1.0.0"
+  },
+  "author": {
+    "name": "euglenach",
+    "email": "midorimushiiii@gmail.com"
+  },
+  "samples": [
+    {
+      "displayName": "InputSwitcherSample",
+      "description": "",
+      "path": "Samples"
+    }
+  ]
+}
