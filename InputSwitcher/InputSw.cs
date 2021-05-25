@@ -1,4 +1,5 @@
 ﻿using System;
+using InputAsRx;
 using UnityEngine;
 using UniRx;
 

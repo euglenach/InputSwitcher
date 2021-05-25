@@ -1,5 +1,4 @@
-using InputSwitcher;
-using UniRx.Triggers;
+using InputAsRx.Triggers;
 using UnityEngine;
 using UniRx;
 
